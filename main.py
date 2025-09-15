@@ -1,16 +1,15 @@
-from js import document 
+from js import document
 
 def calculate_area(event=None):
     try:
-        base1 = float(Element("base1").element.value)
-        base2 = float(Element("base2").element.value)
-        height = float(Element("height").element.value)
+        base1 = float(document.getElementById("base1").value)
+        base2 = float(document.getElementById("base2").value)
+        height = float(document.getElementById("height").value)
 
         area = (base1 + base2) / 2 * height
-        Element("trapezoid-area").element.innerText = f"{area:.2f}"
+        document.getElementById("trapezoid-area").innerText = f"{area:.2f}"
     except:
-        Element("trapezoid-area").element.innerText = "Invalid input"
+        document.getElementById("trapezoid-area").innerText = "Invalid input"
 
 # Attach button click event
-Element("calcBtn").element.onclick = calculate_area
-
+document.getElementById("calcBtn").onclick = calculate_area
