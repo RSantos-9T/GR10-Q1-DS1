@@ -1,4 +1,4 @@
-from pyscript import Element
+from js import document 
 
 def calculate_area(event=None):
     try:
@@ -13,3 +13,4 @@ def calculate_area(event=None):
 
 # Attach button click event
 Element("calcBtn").element.onclick = calculate_area
+
